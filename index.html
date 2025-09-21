@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Interactive digital portfolio — HTML, CSS, JavaScript"
+    />
+    <title>Interactive Portfolio — MUTUKURU SUDHEER</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicons (simple) -->
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  </head>
+  <body class="light">
+    <!-- Top navigation -->
+    <header class="site-header">
+      <div class="container header-grid">
+        <a href="#hero" class="brand">MUTUKURU SUDHEER</a>
+
+        <nav id="nav" class="nav">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-controls">
+          <button
+            id="themeToggle"
+            class="btn icon-btn"
+            aria-label="Toggle theme"
+          >
+            🌙
+          </button>
+          <button
+            id="menuToggle"
+            class="btn icon-btn mobile-only"
+            aria-label="Toggle menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="headline">
+            I build elegant interfaces<br /><span class="accent"
+              >that solve real problems</span
+            >
+          </h1>
+          <p class="lede">
+            Front-end developer • UI/UX enthusiast • JavaScript & CSS craftsman
+          </p>
+
+          <div class="hero-ctas">
+            <a class="btn primary" href="#projects">View Work</a>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+          </div>
+
+          <ul class="hero-stats" aria-hidden="false">
+            <li><strong id="stat-projects">0</strong><span>Projects</span></li>
+            <li><strong id="stat-clients">0</strong><span>Clients</span></li>
+            <li><strong id="stat-awards">0</strong><span>Awards</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-card" aria-hidden="true">
+          <div
+            class="profile-photo"
+            role="img"
+            aria-label="Portrait of Your Name"
+          >
+            <!-- placeholder gradient avatar -->
+          </div>
+          <div class="profile-meta">
+            <h3>Your Name</h3>
+            <p>Front-end Developer</p>
+            <div class="socials">
+              <a href="#" aria-label="GitHub">GH</a>
+              <a href="#" aria-label="LinkedIn">LI</a>
+              <a href="#" aria-label="Email">✉</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I’m Sudheer Mutukuru, a curious problem-solver passionate about building practical solutions with Python and HTML. During my IBM internship, I applied these skills to real-world projects, learning how creativity and collaboration turn ideas into impactful results. I enjoy exploring new challenges, experimenting with code, and continuously growing as a developer.
+            </p>
+          </div>
+
+          <div class="about-skills-card">
+            <h3>Highlights</h3>
+            <ul>
+              <li>Worked on Python Projects to slove real-world problems</li>
+              <li>Created web pages using HTML for better user interaction</li>
+              <li>Gained hands-on experience in coding and debubgging</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+
+        <div class="project-controls">
+          <input
+            id="projectSearch"
+            type="search"
+            placeholder="Search projects..."
+            aria-label="Search projects"
+          />
+          <div class="filters">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="web">Web</button>
+            <button class="chip" data-filter="ui">UI</button>
+            <button class="chip" data-filter="js">JavaScript</button>
+          </div>
+        </div>
+
+        <div id="projectGrid" class="project-grid" aria-live="polite">
+          <!-- Project cards (sample) -->
+          <article class="project-card" data-tags="web js">
+            <img
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='350'><rect fill='%23e2e8f0' width='100%' height='100%'/><text x='50%' y='50%' fill='%23999' font-size='28' text-anchor='middle' dominant-baseline='central'>Project A</text></svg>"
+              alt=""
+            />
+            <div class="project-body">
+              <h3>Project A</h3>
+              <p>
+                Single-page app with smooth transitions and performant
+                rendering.
+              </p>
+              <div class="project-meta">
+                <span class="tag">Web</span>
+                <button
+                  class="btn small view-btn"
+                  data-title="Project A"
+                  data-desc="A SPA demonstrating advanced routing-less state and components."
+                  data-links='{"live":"#","repo":"#"}'
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="ui">
+            <img
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='350'><rect fill='%23f8fafc' width='100%' height='100%'/><text x='50%' y='50%' fill='%23888' font-size='28' text-anchor='middle' dominant-baseline='central'>Project B</text></svg>"
+              alt=""
+            />
+            <div class="project-body">
+              <h3>Project B</h3>
+              <p>
+                Design system with reusable components and token-based theming.
+              </p>
+              <div class="project-meta">
+                <span class="tag">UI</span>
+                <button
+                  class="btn small view-btn"
+                  data-title="Project B"
+                  data-desc="Design system and component library."
+                  data-links='{"live":"#","repo":"#"}'
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="web js">
+            <img
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='350'><rect fill='%23eef2ff' width='100%' height='100%'/><text x='50%' y='50%' fill='%23555' font-size='28' text-anchor='middle' dominant-baseline='central'>Project C</text></svg>"
+              alt=""
+            />
+            <div class="project-body">
+              <h3>Project C</h3>
+              <p>
+                Progressive web app with offline caching and background sync.
+              </p>
+              <div class="project-meta">
+                <span class="tag">Web</span>
+                <button
+                  class="btn small view-btn"
+                  data-title="Project C"
+                  data-desc="PWA built w/ caching & service workers."
+                  data-links='{"live":"#","repo":"#"}'
+                >
+                  View
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills & Tools</h2>
+        <div class="skills-grid">
+          <div class="skill">
+            <h4>HTML & Semantics</h4>
+            <div class="progress" data-value="95" aria-hidden="true">
+              <div class="bar"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>CSS (Grid/Flex/Anim)</h4>
+            <div class="progress" data-value="90" aria-hidden="true">
+              <div class="bar"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>JavaScript (ES6+)</h4>
+            <div class="progress" data-value="85" aria-hidden="true">
+              <div class="bar"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>Performance & Accessibility</h4>
+            <div class="progress" data-value="80" aria-hidden="true">
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title">Get in touch</h2>
+          <p>
+            If you'd like to work with me, say hello — I respond within a few
+            business days.
+          </p>
+          <ul class="contact-info">
+            <li>
+              <strong>Emai l:</strong>
+              <a href="mailto:you@domain.com">mutukurusudheer@gmail.com</a>
+            </li>
+            <li>
+              <strong>Phone:</strong> <a href="tel:+0000000000">+91 6305274060</a>
+            </li>
+            <li><strong>Location:</strong> Kadapa, Andhra Pradesh, India</li>
+          </ul>
+        </div>
+
+        <form
+          id="contactForm"
+          class="contact-form"
+          action="javascript:void(0);"
+          novalidate
+        >
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send Message</button>
+            <button class="btn ghost" type="reset">Reset</button>
+          </div>
+          <p
+            id="formStatus"
+            class="form-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © <span id="year"></span> mutukurusudheer. Crafted with HTML, CSS &
+          JavaScript.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Project modal -->
+    <div
+      id="modal"
+      class="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="modal-content" role="document">
+        <button class="modal-close btn icon-btn" aria-label="Close">✕</button>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <p id="modalLinks"></p>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
